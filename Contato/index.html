@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honey King</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</head>
+
+<body class="body-rest" id="app">
+  <main>
+    <!--/NavBar section-->
+    <div class="navbar">
+      <img class="camera-logo" src="../logo.png" alt="Honey King">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="index.html" rel="internal" style="text-decoration: none;">projetos</a>
+        </li>
+        <li><a class="nav-link" href="Arquivos/index.html" rel="internal" style="text-decoration: none;">arquivos</a>
+        </li>
+        <li><a class="nav-link" href="Contato/index.html" rel="internal" style="text-decoration: none;">contato</a>
+        </li>
+      </ul>
+      </nav>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <img class="contact-image"
+        src="https://s.abcnews.com/images/Technology/drone-flying-missing-student-gty-thg-180109_hpMain_5_4x5_992.jpg"
+        alt="project">
+      <div class="form-header">
+        <h2>Entre em contato</h4>
+          <h3>hk.profilms@gmail.com</h5>
+            <br>
+            <a class="email-btn" href="mailto:hk.profilms@gmail.com">
+              envie um email
+            </a> <br><br>
+            <a class="ig-btn" href="#instagram-widget">
+              conecte no Instagram
+            </a>
+      </div>
+    </div>
+    <!--Instagram-->
+    <!-- <iframe class="instagram-widget" id="instagram-widget"
+      src='https://widgets.sociablekit.com/instagram-feed/iframe/141195' frameborder='0'></iframe> -->
+
+  </main>
+  <!--/Footer section-->
+  <footer>
+    <div class="contact-links">
+      <a id="email-link" href="mailto:hk.profilms@gmail.com" target="_blank" class="contact-link"><i
+          class="fas fa-at contact-icons"></i></a>
+      <a id="profile-link" href="https://www.instagram.com/jasmincortez/" target="_blank" class="contact-link"><i
+          class="fab fa-instagram contact-icons"></i></a>
+      <a id="linkedin-link" href="https://www.youtube.com/channel/UCBBEwlCFKcZOVGu1wujKLsg" target="_blank"
+        class="contact-link"><i class="fab fa-youtube contact-icons"></i></a>
+    </div>
+    <div class="madeby"> Designed by <a href="https://jasmincortez.github.io/WebDev/">Jasmin Cortez</a></div>
+  </footer>
+  <script rel="JavaScript" src="./script.js"></script>
+</body>
+
+<script>
+  const phoneInputField = document.querySelector("#phone");
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+  const info = document.querySelector(".alert-info");
+
+  function process(event) {
+    event.preventDefault();
+
+    const phoneNumber = phoneInput.getNumber();
+
+    info.style.display = "";
+    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+  }
+</script>
+
+</html>
